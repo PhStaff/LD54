@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://t2j1ctgiqud3"]
+
+[ext_resource type="PackedScene" uid="uid://dd1rie08wkcl0" path="res://Parts/part.tscn" id="1_1raqm"]
+[ext_resource type="Texture2D" uid="uid://ccj18bpx81ram" path="res://Materials/Parts/part_4_5.png" id="2_f6hmt"]
+[ext_resource type="Texture2D" uid="uid://ctcxbvr2iyuoq" path="res://Materials/Parts/part_4_3.png" id="3_8f7xv"]
+[ext_resource type="Texture2D" uid="uid://caker2erpsgta" path="res://Materials/Parts/part_4_2.png" id="4_2udnr"]
+[ext_resource type="Texture2D" uid="uid://cyjnyh7sr6hfl" path="res://Materials/Parts/part_4_4.png" id="5_dctyb"]
+[ext_resource type="Texture2D" uid="uid://cyurtkonxw86y" path="res://Materials/Parts/part_4_1.png" id="6_kosjh"]
+
+[node name="Part" instance=ExtResource("1_1raqm")]
+part_name = "SMM Series 03"
+armor = 275
+weight = 100
+price = 200
+connect_l_leg_x = 2
+connect_l_leg_y = 8
+connect_l_arm_x = 3
+connect_l_arm_y = -5
+connect_r_leg_x = -5
+connect_r_leg_y = 10
+connect_r_arm_x = -8
+connect_r_arm_y = -5
+
+[node name="l_leg" type="Sprite2D" parent="." index="0"]
+visible = false
+position = Vector2(4, 18)
+texture = ExtResource("2_f6hmt")
+
+[node name="l_arm" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(8, -1)
+texture = ExtResource("3_8f7xv")
+
+[node name="Body" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("4_2udnr")
+
+[node name="r_leg" type="Sprite2D" parent="." index="3"]
+visible = false
+position = Vector2(-4, 21)
+texture = ExtResource("5_dctyb")
+
+[node name="r_arm" type="Sprite2D" parent="." index="4"]
+visible = false
+position = Vector2(-7, 4)
+texture = ExtResource("6_kosjh")

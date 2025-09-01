@@ -1,0 +1,33 @@
+[gd_scene load_steps=11 format=3 uid="uid://cjwt5m8w82ihn"]
+
+[ext_resource type="PackedScene" uid="uid://bdorrdm1gesuw" path="res://shops/shop.tscn" id="1_a0l4w"]
+[ext_resource type="PackedScene" uid="uid://mdwshp3rn6t5" path="res://Parts/_part_body_11.tscn" id="2_cofdp"]
+[ext_resource type="PackedScene" uid="uid://ckkexem675c4e" path="res://Parts/_part_body_21.tscn" id="3_7ryth"]
+[ext_resource type="PackedScene" uid="uid://bq2u8sapilb0u" path="res://Parts/_part_body_31.tscn" id="4_632l8"]
+[ext_resource type="PackedScene" uid="uid://bqas3yejbbr7y" path="res://Parts/_part_body_12.tscn" id="5_osdk0"]
+[ext_resource type="PackedScene" uid="uid://bxo1wqc2qh0y2" path="res://Parts/_part_body_22.tscn" id="6_dxuvy"]
+[ext_resource type="PackedScene" uid="uid://c7bwuxvnd5gei" path="res://Parts/_part_body_32.tscn" id="7_6kcbq"]
+[ext_resource type="PackedScene" uid="uid://d071lxmpcj0mx" path="res://Parts/_part_body_13.tscn" id="8_cn7yt"]
+[ext_resource type="PackedScene" uid="uid://cm20a1rl5r456" path="res://Parts/_part_body_23.tscn" id="9_qr425"]
+[ext_resource type="PackedScene" uid="uid://cgel7f4f56sgf" path="res://Parts/_part_body_33.tscn" id="10_dbvij"]
+
+[node name="Shop" instance=ExtResource("1_a0l4w")]
+leave_to = "_town_2.tscn"
+
+[node name="Part4" parent="Parts_Body" index="0" instance=ExtResource("2_cofdp")]
+
+[node name="Part2" parent="Parts_Body" index="1" instance=ExtResource("3_7ryth")]
+
+[node name="Part3" parent="Parts_Body" index="2" instance=ExtResource("4_632l8")]
+
+[node name="Part4" parent="Parts_Legs" index="0" instance=ExtResource("5_osdk0")]
+
+[node name="Part2" parent="Parts_Legs" index="1" instance=ExtResource("6_dxuvy")]
+
+[node name="Part3" parent="Parts_Legs" index="2" instance=ExtResource("7_6kcbq")]
+
+[node name="Part4" parent="Parts_Weapons" index="0" instance=ExtResource("8_cn7yt")]
+
+[node name="Part2" parent="Parts_Weapons" index="1" instance=ExtResource("9_qr425")]
+
+[node name="Part3" parent="Parts_Weapons" index="2" instance=ExtResource("10_dbvij")]

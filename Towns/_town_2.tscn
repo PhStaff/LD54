@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyayq3t4sagc4"]
+
+[ext_resource type="PackedScene" uid="uid://s0nrwvacroms" path="res://Towns/Town.tscn" id="1_ck8fw"]
+[ext_resource type="PackedScene" uid="uid://dhwfit8lnttg" path="res://Jobs/_Job_1.tscn" id="2_36m7m"]
+[ext_resource type="PackedScene" uid="uid://yekv835cipmg" path="res://Jobs/_Job_4.tscn" id="3_nqlrc"]
+[ext_resource type="PackedScene" uid="uid://ep2bi8voy1m2" path="res://Jobs/_Job_7.tscn" id="4_mvori"]
+
+[node name="Town" instance=ExtResource("1_ck8fw")]
+town_shop = "_shop_2.tscn"
+town_name = "Town 2"
+
+[node name="Job" parent="Job_Offers" index="0" instance=ExtResource("2_36m7m")]
+
+[node name="Job2" parent="Job_Offers" index="1" instance=ExtResource("3_nqlrc")]
+
+[node name="Job3" parent="Job_Offers" index="2" instance=ExtResource("4_mvori")]

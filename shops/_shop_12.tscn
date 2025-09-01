@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvgtelouky46u"]
+
+[ext_resource type="PackedScene" uid="uid://bdorrdm1gesuw" path="res://shops/shop.tscn" id="1_is8ql"]
+
+[node name="Shop" instance=ExtResource("1_is8ql")]
+leave_to = "_town_12.tscn"

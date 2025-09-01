@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://r2dmmjnt5wbq"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_5vnan"]
+
+[node name="Event" instance=ExtResource("1_5vnan")]
+event_name = "Narrator"
+difficulty = 50
+win_condition = 5
+fail_money = -5
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "Hey, how are you?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You refuse to  get into a converation with the narrator. Better not trust
+that guy!"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You are surprised about the fact that the narrator starts a conversation
+with you, but sure, why not, you have a pleasant little chat.
+
+It turns out the narrator is also a mechanic and from the pure kindness
+of their heart, they fix some of your broken parts.
+
+Condition +5"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You are surprised about the fact that the narrator starts a conversation
+with you, but sure, why not, you have a pleasant little chat.
+
+As the narrator leaves, you realize they stole some of your money. What a 
+prick!
+
+Money -5"

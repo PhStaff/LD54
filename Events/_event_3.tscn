@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://4iflhlgic7yw"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_2exsm"]
+
+[node name="Event" instance=ExtResource("1_2exsm")]
+event_name = "WreckageTrap"
+difficulty = 25
+win_money = 25
+win_ammo = -2
+fail_money = -20
+fail_fuel = -2
+fail_ammo = -5
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "From the distance you can see smoke. You pause to take a closer 
+look. You see a wreckage of an old mech.
+
+Do you investigate it?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You can't risk getting ambushed, so you don't investigate the wreckage."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "As you approach the wreckage, you see movement out of the corner of 
+your eye. It's a trap!
+
+Your attackers aren't strong, so you easily manage to fight them
+back without taking any damage. You even manage to get some money.
+
+Money +25
+
+Ammo -2"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "As you approach the wreckage, you see movement out of the corner of 
+your eye. It's a trap!
+
+Your attackers aren't strong, but they managed to surprise you. You
+lose some of your ressources.
+
+Money -20
+Fuel -2
+Ammo -5"

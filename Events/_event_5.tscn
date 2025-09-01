@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://032idg024vdy"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_5f3n6"]
+
+[node name="Event" instance=ExtResource("1_5f3n6")]
+event_name = "Raid"
+win_money = 50
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "You hear the sound of your radio picking up a signal. It sounds unusual, 
+as you don't meet a lot of people out here, but you still listen to the 
+signal.
+
+It's a distress call. It seems someone is getting attacked by some bandits.
+
+Do you help them?
+(The victims that is... not the bandits...)"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You don't trust the distress call. It could be a trap. You decide you don't
+go to help them.
+(The victims, that is... and also the bandits...)"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You rush to the source of the distress call. You aren't too late and you 
+can see bandits raiding a group of civilians. Quickly you join the 
+battle.
+(To help the civilians... not the bandits...)
+
+Together you manage to fight off the bandits. The people you helped 
+thank you. They give you some money.
+
+Money +50"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "The missions failed.
+
+This is what happens"

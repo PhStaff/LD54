@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://cej4dx6rrrhxa"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_4yvr5"]
+
+[node name="Event" instance=ExtResource("1_4yvr5")]
+event_name = "WreckageBig"
+difficulty = 50
+win_money = 100
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "From the distance you can see smoke. You pause to take a closer 
+look. You see a wreckage of a big mech. What ever happened, it wasn't
+weak.
+
+Do you investigate it?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "What ever happened, it was dangerous. You decide not to investigate
+the wreckage."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "The wreckage of the mech has been abandoned for a long time. You can see
+marks of a battle that took place a long time ago.
+
+You investigate the wreckage and find a lot of money.
+
+Money +100"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "The wreckage of the mech has been abandoned for a long time. You can 
+see marks of a battle that happened around here.
+
+You investigate the wreckage, but you can't find anything. It's been too
+long."

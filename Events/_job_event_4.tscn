@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvq2g7te4tsao"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_dfryj"]
+
+[node name="Event" instance=ExtResource("1_dfryj")]
+event_name = "ProtectEasy"
+difficulty = 50
+win_money = 15
+fail_ammo = -1
+fail_condition = -10
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for support for a mission close to the village. 
+They don't expect any ambush, but they would like to play it safe."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+You get ambushed by some minor thugs, but nothing you couldn't
+handle.
+
+Money +50"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+You get ambushed by some minor thugs. Even though they aren't very
+dangerous, they take you by surprise.
+
+Condition -10
+
+Ammo -1"

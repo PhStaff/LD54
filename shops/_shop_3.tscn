@@ -1,0 +1,39 @@
+[gd_scene load_steps=11 format=3 uid="uid://cqgrjove15jio"]
+
+[ext_resource type="PackedScene" uid="uid://cjwt5m8w82ihn" path="res://shops/_shop_2.tscn" id="1_jaxsr"]
+[ext_resource type="PackedScene" uid="uid://t2j1ctgiqud3" path="res://Parts/_part_body_41.tscn" id="2_78rk7"]
+[ext_resource type="PackedScene" uid="uid://224kshjc34pk" path="res://Parts/_part_body_51.tscn" id="3_khqsv"]
+[ext_resource type="PackedScene" uid="uid://ckljygn4r2cvn" path="res://Parts/_part_body_61.tscn" id="4_4sdyh"]
+[ext_resource type="PackedScene" uid="uid://cpy5uedu6rpt8" path="res://Parts/_part_body_42.tscn" id="5_hjx6p"]
+[ext_resource type="PackedScene" uid="uid://c4texd0v8rjvm" path="res://Parts/_part_body_52.tscn" id="6_5f2jt"]
+[ext_resource type="PackedScene" uid="uid://1ryrdkpq51of" path="res://Parts/_part_body_62.tscn" id="7_7l0r0"]
+[ext_resource type="PackedScene" uid="uid://dpo4cjnqvqg77" path="res://Parts/_part_body_43.tscn" id="8_smwr1"]
+[ext_resource type="PackedScene" uid="uid://ckdek7i7nnpx6" path="res://Parts/_part_body_53.tscn" id="9_ysbk0"]
+[ext_resource type="PackedScene" uid="uid://dt5esnuuf2jlh" path="res://Parts/_part_body_63.tscn" id="10_vym6w"]
+
+[node name="Shop" instance=ExtResource("1_jaxsr")]
+leave_to = "_town_3.tscn"
+
+[node name="PartShop" parent="." index="1"]
+offset_right = 1240.0
+
+[node name="Preview" parent="." index="2"]
+offset_right = 1216.0
+
+[node name="Part5" parent="Parts_Body" index="3" instance=ExtResource("2_78rk7")]
+
+[node name="Part6" parent="Parts_Body" index="4" instance=ExtResource("3_khqsv")]
+
+[node name="Part7" parent="Parts_Body" index="5" instance=ExtResource("4_4sdyh")]
+
+[node name="Part5" parent="Parts_Legs" index="3" instance=ExtResource("5_hjx6p")]
+
+[node name="Part6" parent="Parts_Legs" index="4" instance=ExtResource("6_5f2jt")]
+
+[node name="Part7" parent="Parts_Legs" index="5" instance=ExtResource("7_7l0r0")]
+
+[node name="Part5" parent="Parts_Weapons" index="3" instance=ExtResource("8_smwr1")]
+
+[node name="Part6" parent="Parts_Weapons" index="4" instance=ExtResource("9_ysbk0")]
+
+[node name="Part7" parent="Parts_Weapons" index="5" instance=ExtResource("10_vym6w")]

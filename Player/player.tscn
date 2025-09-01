@@ -1,0 +1,296 @@
+[gd_scene load_steps=17 format=3 uid="uid://c4yawuxi2qfpp"]
+
+[ext_resource type="Script" path="res://Player/Player.gd" id="1_qqby7"]
+[ext_resource type="Texture2D" uid="uid://digjgwt82gf7f" path="res://Materials/mecha_template.png" id="2_rq02g"]
+[ext_resource type="PackedScene" uid="uid://p6tagfhhxv5d" path="res://Parts/_part_body_03.tscn" id="3_gaqfj"]
+[ext_resource type="PackedScene" uid="uid://ca0hwu5shfrwe" path="res://Parts/_part_body_02.tscn" id="4_4ula1"]
+[ext_resource type="PackedScene" uid="uid://devf5nnxnv8t" path="res://Parts/_part_body_01.tscn" id="5_rvyw1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pucb5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1hjx0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_325vr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yjfi8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rtj57"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yd2wk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i1v2s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m7qst"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gnhda"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7cydp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x6c44"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_qqby7")
+
+[node name="Mecha" type="Panel" parent="."]
+offset_left = 24.0
+offset_top = 232.0
+offset_right = 304.0
+offset_bottom = 432.0
+
+[node name="Values" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 34.0
+text = "Values
+"
+
+[node name="Cond" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 92.0
+offset_bottom = 66.0
+text = "Condition
+"
+
+[node name="Cond_val" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 40.0
+offset_right = 244.0
+offset_bottom = 66.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_pucb5")
+
+[node name="Armor" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 66.0
+offset_bottom = 98.0
+text = "Armor"
+
+[node name="Armor_val" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 72.0
+offset_right = 244.0
+offset_bottom = 98.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_1hjx0")
+
+[node name="Damage" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 66.0
+offset_bottom = 130.0
+text = "Damage Output"
+
+[node name="Damage_val" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 104.0
+offset_right = 244.0
+offset_bottom = 130.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_325vr")
+
+[node name="Weight" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 136.0
+offset_right = 71.0
+offset_bottom = 162.0
+text = "Weight"
+
+[node name="Weight_val" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 136.0
+offset_right = 244.0
+offset_bottom = 162.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_yjfi8")
+
+[node name="WeightCap" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 168.0
+offset_right = 104.0
+offset_bottom = 194.0
+text = "Weight Capacity"
+
+[node name="WeightCap_val" type="Label" parent="Mecha"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 168.0
+offset_right = 244.0
+offset_bottom = 194.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_rtj57")
+
+[node name="Items" type="Panel" parent="."]
+offset_left = 24.0
+offset_top = 456.0
+offset_right = 304.0
+offset_bottom = 688.0
+
+[node name="Items" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 67.0
+offset_bottom = 34.0
+text = "Items
+"
+
+[node name="Money" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 40.0
+offset_right = 92.0
+offset_bottom = 66.0
+text = "Money
+"
+
+[node name="Money_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 40.0
+offset_right = 244.0
+offset_bottom = 66.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_yd2wk")
+
+[node name="InventoryCap" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 200.0
+offset_right = 140.0
+offset_bottom = 226.0
+text = "Inventory Space
+"
+
+[node name="InventoryCap_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 200.0
+offset_right = 244.0
+offset_bottom = 226.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_i1v2s")
+
+[node name="Inventory" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 168.0
+offset_right = 140.0
+offset_bottom = 194.0
+text = "Inventory
+"
+
+[node name="Inventory_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 168.0
+offset_right = 244.0
+offset_bottom = 194.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_m7qst")
+
+[node name="Ammo" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 92.0
+offset_bottom = 130.0
+text = "Ammo
+"
+
+[node name="Ammo_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 104.0
+offset_right = 244.0
+offset_bottom = 130.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_gnhda")
+
+[node name="Fuel" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 66.0
+offset_bottom = 98.0
+text = "Fuel"
+
+[node name="Fuel_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 72.0
+offset_right = 244.0
+offset_bottom = 98.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_7cydp")
+
+[node name="Food" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 136.0
+offset_right = 92.0
+offset_bottom = 162.0
+text = "Food
+"
+
+[node name="Food_val" type="Label" parent="Items"]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 136.0
+offset_right = 244.0
+offset_bottom = 162.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_x6c44")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(152, 120)
+texture = ExtResource("2_rq02g")
+
+[node name="Parts" type="Node" parent="."]
+
+[node name="body" parent="Parts" instance=ExtResource("5_rvyw1")]
+visible = false
+
+[node name="legs" parent="Parts" instance=ExtResource("4_4ula1")]
+visible = false
+
+[node name="arms" parent="Parts" instance=ExtResource("3_gaqfj")]
+visible = false
+
+[node name="Sprite" type="Node2D" parent="."]
+position = Vector2(142, 94)
+scale = Vector2(3, 3)
+
+[node name="l_arm" type="Sprite2D" parent="Sprite"]
+
+[node name="l_leg" type="Sprite2D" parent="Sprite"]
+
+[node name="body" type="Sprite2D" parent="Sprite"]
+
+[node name="r_leg" type="Sprite2D" parent="Sprite"]
+
+[node name="r_arm" type="Sprite2D" parent="Sprite"]

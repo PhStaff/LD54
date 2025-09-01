@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://du6w5qv4ijfku"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_v5vpi"]
+
+[node name="Event" instance=ExtResource("1_v5vpi")]
+event_name = "Sneeze"
+fail_condition = -5
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "After walking with your mecha for a very long time, you get a strange 
+feeling. Something is wrong...
+
+You sneeze!
+
+Do you clean your nose?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "Can't risk not paying attention to your surroundings.
+
+You just let your nose run.
+
+*sniff*"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You swiftly grab a tissue. Just one moment and all is done.
+
+Operation nose clean was a full success."
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You grab a tissue, but you don't pay enough attention and your mech 
+stumbles over some rubble. Your mech takes some minor damage. 
+
+And  your nose is still running.
+
+Condition -5"

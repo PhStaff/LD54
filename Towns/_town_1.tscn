@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://8d5sjnsuih25"]
+
+[ext_resource type="PackedScene" uid="uid://s0nrwvacroms" path="res://Towns/Town.tscn" id="1_mkfuq"]
+[ext_resource type="PackedScene" uid="uid://dy0snbuo50cwn" path="res://Jobs/Job.tscn" id="2_g28wb"]
+
+[node name="Town" instance=ExtResource("1_mkfuq")]
+
+[node name="Job4" parent="Job_Offers" index="3" instance=ExtResource("2_g28wb")]
+job_name = "Eliminate"
+
+[node name="Job5" parent="Job_Offers" index="4" instance=ExtResource("2_g28wb")]
+job_name = "Rescue"
+
+[node name="Job6" parent="Job_Offers" index="5" instance=ExtResource("2_g28wb")]
+job_name = "Chill"

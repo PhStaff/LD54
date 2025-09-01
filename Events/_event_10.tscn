@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfgirj0m84h0x"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_1c3p8"]
+
+[node name="Event" instance=ExtResource("1_1c3p8")]
+event_name = "Lost"
+win_condition = 5
+fail_fuel = -2
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "You walk for a very long time. You see a wreckage of an old car. You
+look into the distance and you see... nothing. 
+
+... Have you gotten... lost?!
+
+Maybe you should set up a distress call and wait for help."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "Nah, you are fine, you don't need a distress call or help from anyone!
+
+It takes some time, but you manage to get back on track."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You wait. For some time nothing happens.
+
+After a long time you see some distance figures approaching you.
+
+They offer you some help and even helped you with some repairs. 
+Together you manage to get back on track.
+Turns out you were way off your original path.
+
+Condition +5"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You wait. For some time nothing happens.
+
+After a long time there is still nothing happening.
+
+It seems noone is coming to help you and you wasted some of your fuel.
+
+Fuel -2"

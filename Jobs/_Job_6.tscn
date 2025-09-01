@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6q80sxu32da0"]
+
+[ext_resource type="PackedScene" uid="uid://dy0snbuo50cwn" path="res://Jobs/Job.tscn" id="1_b6vmw"]
+
+[node name="Job" instance=ExtResource("1_b6vmw")]
+job_name = "Protection - Hard"
+event_index = 6

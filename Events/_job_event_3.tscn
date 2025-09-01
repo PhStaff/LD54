@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpo6p3ib81qll"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_ynqma"]
+
+[node name="Event" instance=ExtResource("1_ynqma")]
+event_name = "EliminateHard"
+difficulty = 75
+win_money = 100
+win_ammo = -2
+fail_ammo = -4
+fail_condition = -50
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you to take out some heavy armed soldiers. 
+They are very dangerous, but the payment is big."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You took out the soldiers.
+
+Money +100
+
+Ammo -2"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You couldn't take out the soldiers.
+
+Condition -50
+Ammo -4"

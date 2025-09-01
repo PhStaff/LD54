@@ -1,0 +1,34 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlyj1awm2brjt"]
+
+[ext_resource type="PackedScene" uid="uid://s0nrwvacroms" path="res://Towns/Town.tscn" id="1_pqd7f"]
+[ext_resource type="PackedScene" uid="uid://dhwfit8lnttg" path="res://Jobs/_Job_1.tscn" id="2_r1rgs"]
+[ext_resource type="PackedScene" uid="uid://jmucjem7mjcl" path="res://Jobs/_Job_2.tscn" id="3_1moe3"]
+[ext_resource type="PackedScene" uid="uid://bb02332aokvhp" path="res://Jobs/_Job_3.tscn" id="4_xjcpx"]
+[ext_resource type="PackedScene" uid="uid://yekv835cipmg" path="res://Jobs/_Job_4.tscn" id="5_58t0h"]
+[ext_resource type="PackedScene" uid="uid://cjujtu840taug" path="res://Jobs/_Job_5.tscn" id="6_sgm3r"]
+[ext_resource type="PackedScene" uid="uid://c6q80sxu32da0" path="res://Jobs/_Job_6.tscn" id="7_i05qp"]
+[ext_resource type="PackedScene" uid="uid://ep2bi8voy1m2" path="res://Jobs/_Job_7.tscn" id="8_5mb2o"]
+[ext_resource type="PackedScene" uid="uid://brleyywiymlux" path="res://Jobs/_Job_8.tscn" id="9_wsf1a"]
+[ext_resource type="PackedScene" uid="uid://c2cdw5n4xcqhd" path="res://Jobs/_Job_9.tscn" id="10_crtv2"]
+
+[node name="Town" instance=ExtResource("1_pqd7f")]
+town_shop = "_shop_8.tscn"
+town_name = "Town 8"
+
+[node name="Job" parent="Job_Offers" index="0" instance=ExtResource("2_r1rgs")]
+
+[node name="Job2" parent="Job_Offers" index="1" instance=ExtResource("3_1moe3")]
+
+[node name="Job3" parent="Job_Offers" index="2" instance=ExtResource("4_xjcpx")]
+
+[node name="Job4" parent="Job_Offers" index="3" instance=ExtResource("5_58t0h")]
+
+[node name="Job5" parent="Job_Offers" index="4" instance=ExtResource("6_sgm3r")]
+
+[node name="Job6" parent="Job_Offers" index="5" instance=ExtResource("7_i05qp")]
+
+[node name="Job7" parent="Job_Offers" index="6" instance=ExtResource("8_5mb2o")]
+
+[node name="Job8" parent="Job_Offers" index="7" instance=ExtResource("9_wsf1a")]
+
+[node name="Job9" parent="Job_Offers" index="8" instance=ExtResource("10_crtv2")]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgy5mqqfh3qfq"]
+
+[ext_resource type="Script" path="res://Events/Game_Over.gd" id="1_8rk3g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ykq43"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ad8f0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cofh0"]
+
+[node name="Game_Over" type="Node2D"]
+script = ExtResource("1_8rk3g")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 464.0
+offset_top = 64.0
+offset_right = 1192.0
+offset_bottom = 432.0
+
+[node name="Victory_Message" type="Label" parent="."]
+offset_left = 632.0
+offset_top = 168.0
+offset_right = 751.0
+offset_bottom = 194.0
+text = "After a long journey you finally managed to get home.
+  Your mech is beaten up and you both went through
+            a lot, but you managed to pull through.
+
+
+         You beat the game - thank you for playing!"
+
+[node name="No_Fuel" type="Label" parent="."]
+visible = false
+offset_left = 680.0
+offset_top = 200.0
+offset_right = 1025.0
+offset_bottom = 226.0
+text = "You run out of fuel and can't move anymore."
+label_settings = SubResource("LabelSettings_ykq43")
+
+[node name="No_Food" type="Label" parent="."]
+visible = false
+offset_left = 680.0
+offset_top = 248.0
+offset_right = 1025.0
+offset_bottom = 274.0
+text = "You run out of food and starved."
+label_settings = SubResource("LabelSettings_ad8f0")
+
+[node name="Mecha_Broke" type="Label" parent="."]
+visible = false
+offset_left = 680.0
+offset_top = 296.0
+offset_right = 1025.0
+offset_bottom = 322.0
+text = "Your mecha broke and you can't continue."
+label_settings = SubResource("LabelSettings_cofh0")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 768.0
+offset_top = 112.0
+offset_right = 897.0
+offset_bottom = 138.0
+text = "Congratulations!"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 784.0
+offset_top = 352.0
+offset_right = 876.0
+offset_bottom = 383.0
+text = "Quit Game"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

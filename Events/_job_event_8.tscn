@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://divbl1wg6x7as"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_egj0i"]
+
+[node name="Event" instance=ExtResource("1_egj0i")]
+event_name = "ScoutMedium"
+difficulty = 50
+win_money = 100
+win_ammo = -1
+fail_ammo = -2
+fail_condition = -35
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for a  scouting mission. The area is  known to be
+mildly dangerous."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+You are almost done when you get approached by some guys. Before
+you can ask what they want, they start to shoot at you. You react quickly
+and manage to fight them back. 
+
+Money +100
+
+Ammo -1"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+You are almost done when you get approached by some guys. Before
+you can ask what they want, they start to shoot at you. You can't react
+fast enough and you take some damage.
+
+Condition -35
+Ammo -2"

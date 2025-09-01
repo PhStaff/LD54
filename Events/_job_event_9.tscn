@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwqdc03jic0fc"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_feopr"]
+
+[node name="Event" instance=ExtResource("1_feopr")]
+event_name = "ScoutHard"
+difficulty = 75
+win_money = 150
+win_ammo = -2
+fail_ammo = -4
+fail_condition = -50
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for a hard scouting mission. The area is  famous to 
+be very dangerous."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+As soon as you reach the area you get attacked by some people in the 
+distance. This area is indeed dangerous! But after a hard battle, you
+manage to take out your attackers and finish your job.
+
+Money +150
+
+Ammo -2"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+As soon as you reach the area you get attacked by some people in the 
+distance. This area is indeed dangerous! After taking some heavy 
+damage you are forced to abandon the job.
+
+Condition -50
+Ammo -4"

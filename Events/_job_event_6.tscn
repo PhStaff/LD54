@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://qunq82utd876"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_akqe8"]
+
+[node name="Event" instance=ExtResource("1_akqe8")]
+event_name = "ProtectHard"
+difficulty = 75
+win_money = 150
+win_ammo = -2
+fail_ammo = -4
+fail_condition = -50
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for support for a mission close to the village. 
+They expect heavy attacks during their mission."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+Nothing happens.
+
+You think this would be an easy job, until you hear an explosion. Next you
+know bullets are flying everywhere. This is going to be a hard fight.
+
+You manage to protect the client.
+
+Money +150
+
+Ammo -2"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+Nothing happens.
+
+You think this would be an easy job, until you hear an explosion. Next you
+know bullets are flying everywhere. This is going to be a hard fight.
+
+You couldn't manage to protect the client. You also took a lot of damage.
+
+Condition -50
+Ammo -4"

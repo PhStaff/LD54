@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jmucjem7mjcl"]
+
+[ext_resource type="PackedScene" uid="uid://dy0snbuo50cwn" path="res://Jobs/Job.tscn" id="1_v0bh7"]
+
+[node name="Job" instance=ExtResource("1_v0bh7")]
+job_name = "Elimination - Medium"

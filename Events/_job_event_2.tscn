@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://j0h4cty0dfir"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_ksjn8"]
+
+[node name="Event" instance=ExtResource("1_ksjn8")]
+event_name = "EliminateMedium"
+difficulty = 50
+win_money = 100
+win_ammo = -1
+fail_ammo = -2
+fail_condition = -35
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you to take out some armed bandids. They aren't too
+ dangerous, but they are also not weak. The payment is decent."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You took out the bandits.
+
+Money +100
+
+Ammo -1"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You couldn't take out the punks.
+
+Condition -35
+Ammo -2"

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ep2bi8voy1m2"]
+
+[ext_resource type="PackedScene" uid="uid://dy0snbuo50cwn" path="res://Jobs/Job.tscn" id="1_crd1u"]
+
+[node name="Job" instance=ExtResource("1_crd1u")]
+job_name = "Scouting - Easy"
+event_index = 7

@@ -1,0 +1,414 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdorrdm1gesuw"]
+
+[ext_resource type="Script" path="res://shops/shop.gd" id="1_ho4o2"]
+[ext_resource type="PackedScene" uid="uid://c4yawuxi2qfpp" path="res://Player/player.tscn" id="2_pcxqp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2jmfq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_upqtf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_57spl"]
+
+[node name="Shop" type="Node2D"]
+script = ExtResource("1_ho4o2")
+
+[node name="Player" parent="." instance=ExtResource("2_pcxqp")]
+
+[node name="PartShop" type="Panel" parent="."]
+offset_left = 392.0
+offset_top = 32.0
+offset_right = 1256.0
+offset_bottom = 432.0
+
+[node name="BuyParts" type="Label" parent="PartShop"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 114.0
+offset_bottom = 58.0
+text = "Buy Parts"
+
+[node name="BodyParts" type="Button" parent="PartShop"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 32.0
+offset_right = 276.0
+offset_bottom = 63.0
+text = "Body Parts
+"
+
+[node name="ArmParts_OLD" type="Button" parent="PartShop"]
+visible = false
+layout_mode = 0
+offset_left = 144.0
+offset_top = 200.0
+offset_right = 236.0
+offset_bottom = 231.0
+text = "Arm Parts"
+
+[node name="Leg Parts" type="Button" parent="PartShop"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 88.0
+offset_right = 276.0
+offset_bottom = 119.0
+text = "Leg Parts
+"
+
+[node name="Weapons" type="Button" parent="PartShop"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 144.0
+offset_right = 276.0
+offset_bottom = 175.0
+text = "Arm Parts
+"
+
+[node name="Parts" type="ScrollContainer" parent="PartShop"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 32.0
+offset_right = 504.0
+offset_bottom = 376.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PartShop/Parts"]
+layout_mode = 2
+
+[node name="Preview" type="Panel" parent="."]
+visible = false
+offset_left = 960.0
+offset_top = 64.0
+offset_right = 1232.0
+offset_bottom = 416.0
+
+[node name="Name" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 87.0
+offset_bottom = 42.0
+text = "Name
+"
+
+[node name="Name_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 16.0
+offset_right = 207.0
+offset_bottom = 42.0
+text = "0"
+
+[node name="Costs" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 87.0
+offset_bottom = 74.0
+text = "Costs
+"
+
+[node name="Cost_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 48.0
+offset_right = 207.0
+offset_bottom = 74.0
+text = "0"
+
+[node name="Type" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 87.0
+offset_bottom = 106.0
+text = "Type
+"
+
+[node name="Type_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 80.0
+offset_right = 207.0
+offset_bottom = 106.0
+text = "0"
+
+[node name="Armor" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 136.0
+offset_right = 90.0
+offset_bottom = 162.0
+text = "Armor
+"
+
+[node name="Armor_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 136.0
+offset_right = 207.0
+offset_bottom = 162.0
+text = "0"
+
+[node name="Damage" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 176.0
+offset_right = 104.0
+offset_bottom = 202.0
+text = "Damage
+"
+
+[node name="Damage_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 176.0
+offset_right = 207.0
+offset_bottom = 202.0
+text = "0"
+
+[node name="Weight" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 216.0
+offset_right = 95.0
+offset_bottom = 242.0
+text = "Weight
+"
+
+[node name="Weight_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 216.0
+offset_right = 207.0
+offset_bottom = 242.0
+text = "0"
+
+[node name="WeightCap" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 256.0
+offset_right = 98.0
+offset_bottom = 282.0
+text = "W. Cap.
+"
+
+[node name="WeightCap_val" type="Label" parent="Preview"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 256.0
+offset_right = 207.0
+offset_bottom = 282.0
+text = "0"
+
+[node name="Buy" type="Button" parent="Preview"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 312.0
+offset_right = 190.0
+offset_bottom = 343.0
+text = "Buy
+"
+
+[node name="Back" type="Button" parent="Preview"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 312.0
+offset_right = 85.0
+offset_bottom = 343.0
+text = "Back"
+
+[node name="ItemShop" type="Panel" parent="."]
+offset_left = 392.0
+offset_top = 456.0
+offset_right = 704.0
+offset_bottom = 688.0
+
+[node name="Food" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 42.0
+text = "Food"
+
+[node name="Food_neg" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 16.0
+offset_right = 126.0
+offset_bottom = 47.0
+text = "-"
+
+[node name="Food_sum" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 16.0
+offset_right = 184.0
+offset_bottom = 48.0
+text = "0"
+
+[node name="Food_pos" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 16.0
+offset_right = 210.0
+offset_bottom = 47.0
+text = "+"
+
+[node name="Fuel" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 72.0
+offset_right = 56.0
+offset_bottom = 98.0
+text = "Fuel"
+
+[node name="Fuel_neg" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 72.0
+offset_right = 126.0
+offset_bottom = 103.0
+text = "-"
+
+[node name="Fuel_sum" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 72.0
+offset_right = 184.0
+offset_bottom = 104.0
+text = "0"
+
+[node name="Fuel_pos" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 72.0
+offset_right = 210.0
+offset_bottom = 103.0
+text = "+"
+
+[node name="Ammo" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 128.0
+offset_right = 56.0
+offset_bottom = 154.0
+text = "Ammo"
+
+[node name="Ammo_neg" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 128.0
+offset_right = 126.0
+offset_bottom = 159.0
+text = "-"
+
+[node name="Ammo_sum" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 128.0
+offset_right = 184.0
+offset_bottom = 160.0
+text = "0"
+
+[node name="Ammo_pos" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 210.0
+offset_bottom = 159.0
+text = "+"
+
+[node name="Total_Price" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 184.0
+offset_right = 184.0
+offset_bottom = 210.0
+text = "0"
+
+[node name="Buy_Items" type="Button" parent="ItemShop"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 184.0
+offset_right = 101.0
+offset_bottom = 215.0
+text = "Buy Items"
+
+[node name="Currency" type="Label" parent="ItemShop"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 184.0
+offset_right = 279.0
+offset_bottom = 210.0
+text = "Costs Units"
+
+[node name="Parts_Body" type="Node2D" parent="."]
+visible = false
+
+[node name="Parts_Legs" type="Node2D" parent="."]
+visible = false
+
+[node name="Parts_Arms" type="Node2D" parent="."]
+visible = false
+
+[node name="Parts_Weapons" type="Node2D" parent="."]
+visible = false
+
+[node name="Leave" type="Button" parent="."]
+offset_left = 1056.0
+offset_top = 608.0
+offset_right = 1152.0
+offset_bottom = 639.0
+text = "Leave Shop"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 752.0
+offset_top = 456.0
+offset_right = 984.0
+offset_bottom = 688.0
+
+[node name="Weight_warn" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 124.0
+offset_bottom = 68.0
+text = "Your mech is
+overweight"
+label_settings = SubResource("LabelSettings_2jmfq")
+
+[node name="Inventory_war" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 160.0
+offset_right = 209.0
+offset_bottom = 212.0
+text = "You do not have
+enough inventory space"
+label_settings = SubResource("LabelSettings_upqtf")
+
+[node name="Money_war" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 88.0
+offset_right = 155.0
+offset_bottom = 140.0
+text = "You do not have
+enough cash"
+label_settings = SubResource("LabelSettings_57spl")
+
+[connection signal="button_down" from="PartShop/BodyParts" to="." method="_on_body_parts_button_down"]
+[connection signal="button_down" from="PartShop/ArmParts_OLD" to="." method="_on_arm_parts_button_down"]
+[connection signal="button_down" from="PartShop/Leg Parts" to="." method="_on_leg_parts_button_down"]
+[connection signal="button_down" from="PartShop/Weapons" to="." method="_on_weapons_button_down"]
+[connection signal="button_down" from="Preview/Buy" to="." method="_on_buy_button_down"]
+[connection signal="button_down" from="Preview/Back" to="." method="_on_back_button_down"]
+[connection signal="button_down" from="ItemShop/Food_neg" to="." method="_on_neg_button_down" binds= [0]]
+[connection signal="button_down" from="ItemShop/Food_pos" to="." method="_on_pos_button_down" binds= [0]]
+[connection signal="button_down" from="ItemShop/Fuel_neg" to="." method="_on_neg_button_down" binds= [1]]
+[connection signal="button_down" from="ItemShop/Fuel_pos" to="." method="_on_pos_button_down" binds= [1]]
+[connection signal="button_down" from="ItemShop/Ammo_neg" to="." method="_on_neg_button_down" binds= [2]]
+[connection signal="button_down" from="ItemShop/Ammo_pos" to="." method="_on_pos_button_down" binds= [2]]
+[connection signal="button_down" from="ItemShop/Buy_Items" to="." method="_on_buy_items_button_down"]
+[connection signal="button_down" from="Leave" to="." method="_on_leave_button_down"]

@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://b462jmyvwcqbu"]
+
+[ext_resource type="Script" path="res://Events/Game_Over.gd" id="1_26h2j"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ykq43"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ad8f0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cofh0"]
+
+[node name="Game_Over" type="Node2D"]
+script = ExtResource("1_26h2j")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 464.0
+offset_top = 64.0
+offset_right = 1192.0
+offset_bottom = 432.0
+
+[node name="No_Fuel" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 200.0
+offset_right = 1025.0
+offset_bottom = 226.0
+text = "You run out of fuel and can't move anymore."
+label_settings = SubResource("LabelSettings_ykq43")
+
+[node name="No_Food" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 248.0
+offset_right = 1025.0
+offset_bottom = 274.0
+text = "You run out of food and starved."
+label_settings = SubResource("LabelSettings_ad8f0")
+
+[node name="Mecha_Broke" type="Label" parent="."]
+offset_left = 680.0
+offset_top = 296.0
+offset_right = 1025.0
+offset_bottom = 322.0
+text = "Your mecha broke and you can't continue."
+label_settings = SubResource("LabelSettings_cofh0")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 776.0
+offset_top = 112.0
+offset_right = 861.0
+offset_bottom = 138.0
+text = "Game over"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 776.0
+offset_top = 352.0
+offset_right = 868.0
+offset_bottom = 383.0
+text = "Quit Game"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

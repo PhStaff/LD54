@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cy56g17b23xjt"]
+
+[ext_resource type="PackedScene" uid="uid://dd1rie08wkcl0" path="res://Parts/part.tscn" id="1_grhl1"]
+[ext_resource type="Texture2D" uid="uid://c4syb21aylckj" path="res://Materials/Parts/part_9_5.png" id="2_kytpg"]
+[ext_resource type="Texture2D" uid="uid://2cj1xuf7xe3w" path="res://Materials/Parts/part_9_3.png" id="3_mia0x"]
+[ext_resource type="Texture2D" uid="uid://cr2oebfmmvil6" path="res://Materials/Parts/part_9_2.png" id="4_ejvhx"]
+[ext_resource type="Texture2D" uid="uid://bqa40u2j5d000" path="res://Materials/Parts/part_9_4.png" id="5_ftyq1"]
+[ext_resource type="Texture2D" uid="uid://onyoeak1nmp4" path="res://Materials/Parts/part_9_1.png" id="6_jfkyf"]
+
+[node name="Part" instance=ExtResource("1_grhl1")]
+part_name = "Ender TX"
+armor = 550
+weight = 220
+price = 350
+connect_l_leg_x = 8
+connect_l_leg_y = 9
+connect_l_arm_x = 10
+connect_l_arm_y = -11
+connect_r_leg_x = -5
+connect_r_leg_y = 9
+connect_r_arm_x = -9
+connect_r_arm_y = -2
+
+[node name="l_leg" type="Sprite2D" parent="." index="0"]
+visible = false
+position = Vector2(11, 22)
+texture = ExtResource("2_kytpg")
+
+[node name="l_arm" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(14, -3)
+texture = ExtResource("3_mia0x")
+
+[node name="Body" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("4_ejvhx")
+
+[node name="r_leg" type="Sprite2D" parent="." index="3"]
+visible = false
+position = Vector2(-4, 25)
+texture = ExtResource("5_ftyq1")
+
+[node name="r_arm" type="Sprite2D" parent="." index="4"]
+visible = false
+position = Vector2(-7, 7)
+texture = ExtResource("6_jfkyf")

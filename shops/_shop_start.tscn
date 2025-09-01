@@ -1,0 +1,38 @@
+[gd_scene load_steps=11 format=3 uid="uid://duyadk3t7mdqk"]
+
+[ext_resource type="PackedScene" uid="uid://bdorrdm1gesuw" path="res://shops/shop.tscn" id="1_kg0dt"]
+[ext_resource type="PackedScene" uid="uid://mdwshp3rn6t5" path="res://Parts/_part_body_11.tscn" id="2_mif1r"]
+[ext_resource type="PackedScene" uid="uid://ckkexem675c4e" path="res://Parts/_part_body_21.tscn" id="3_ytpfm"]
+[ext_resource type="PackedScene" uid="uid://bq2u8sapilb0u" path="res://Parts/_part_body_31.tscn" id="4_10v14"]
+[ext_resource type="PackedScene" uid="uid://bqas3yejbbr7y" path="res://Parts/_part_body_12.tscn" id="5_5xl7t"]
+[ext_resource type="PackedScene" uid="uid://bxo1wqc2qh0y2" path="res://Parts/_part_body_22.tscn" id="6_fgm10"]
+[ext_resource type="PackedScene" uid="uid://c7bwuxvnd5gei" path="res://Parts/_part_body_32.tscn" id="7_pvitc"]
+[ext_resource type="PackedScene" uid="uid://d071lxmpcj0mx" path="res://Parts/_part_body_13.tscn" id="8_5nl7q"]
+[ext_resource type="PackedScene" uid="uid://cm20a1rl5r456" path="res://Parts/_part_body_23.tscn" id="9_aq1rm"]
+[ext_resource type="PackedScene" uid="uid://cgel7f4f56sgf" path="res://Parts/_part_body_33.tscn" id="10_pbrvb"]
+
+[node name="Shop" instance=ExtResource("1_kg0dt")]
+
+[node name="Part" parent="Parts_Body" index="0" instance=ExtResource("2_mif1r")]
+
+[node name="Part2" parent="Parts_Body" index="1" instance=ExtResource("3_ytpfm")]
+visible = false
+
+[node name="Part3" parent="Parts_Body" index="2" instance=ExtResource("4_10v14")]
+visible = false
+
+[node name="Part" parent="Parts_Legs" index="0" instance=ExtResource("5_5xl7t")]
+
+[node name="Part2" parent="Parts_Legs" index="1" instance=ExtResource("6_fgm10")]
+visible = false
+
+[node name="Part3" parent="Parts_Legs" index="2" instance=ExtResource("7_pvitc")]
+visible = false
+
+[node name="Part" parent="Parts_Weapons" index="0" instance=ExtResource("8_5nl7q")]
+
+[node name="Part2" parent="Parts_Weapons" index="1" instance=ExtResource("9_aq1rm")]
+visible = false
+
+[node name="Part3" parent="Parts_Weapons" index="2" instance=ExtResource("10_pbrvb")]
+visible = false

@@ -1,0 +1,87 @@
+[gd_scene load_steps=29 format=3 uid="uid://b6yn60lgynkps"]
+
+[ext_resource type="PackedScene" uid="uid://bdorrdm1gesuw" path="res://shops/shop.tscn" id="1_4cqq0"]
+[ext_resource type="PackedScene" uid="uid://mdwshp3rn6t5" path="res://Parts/_part_body_11.tscn" id="2_kaqam"]
+[ext_resource type="PackedScene" uid="uid://ckkexem675c4e" path="res://Parts/_part_body_21.tscn" id="3_77wyw"]
+[ext_resource type="PackedScene" uid="uid://bq2u8sapilb0u" path="res://Parts/_part_body_31.tscn" id="4_ncoyr"]
+[ext_resource type="PackedScene" uid="uid://t2j1ctgiqud3" path="res://Parts/_part_body_41.tscn" id="5_3xreo"]
+[ext_resource type="PackedScene" uid="uid://224kshjc34pk" path="res://Parts/_part_body_51.tscn" id="6_vlveh"]
+[ext_resource type="PackedScene" uid="uid://ckljygn4r2cvn" path="res://Parts/_part_body_61.tscn" id="7_ulcfc"]
+[ext_resource type="PackedScene" uid="uid://cl5cuc66g4j74" path="res://Parts/_part_body_71.tscn" id="8_2it3n"]
+[ext_resource type="PackedScene" uid="uid://dkkojpgdjp7kp" path="res://Parts/_part_body_81.tscn" id="9_xi7gv"]
+[ext_resource type="PackedScene" uid="uid://cy56g17b23xjt" path="res://Parts/_part_body_91.tscn" id="10_wkk6a"]
+[ext_resource type="PackedScene" uid="uid://bqas3yejbbr7y" path="res://Parts/_part_body_12.tscn" id="11_q5fni"]
+[ext_resource type="PackedScene" uid="uid://bxo1wqc2qh0y2" path="res://Parts/_part_body_22.tscn" id="12_y850d"]
+[ext_resource type="PackedScene" uid="uid://c7bwuxvnd5gei" path="res://Parts/_part_body_32.tscn" id="13_t2lts"]
+[ext_resource type="PackedScene" uid="uid://cpy5uedu6rpt8" path="res://Parts/_part_body_42.tscn" id="14_dc1nm"]
+[ext_resource type="PackedScene" uid="uid://c4texd0v8rjvm" path="res://Parts/_part_body_52.tscn" id="15_q6kee"]
+[ext_resource type="PackedScene" uid="uid://1ryrdkpq51of" path="res://Parts/_part_body_62.tscn" id="16_sgv5m"]
+[ext_resource type="PackedScene" uid="uid://c2ndiihy4od65" path="res://Parts/_part_body_72.tscn" id="17_cl3tm"]
+[ext_resource type="PackedScene" uid="uid://dodet2ysncax8" path="res://Parts/_part_body_82.tscn" id="18_ai8j7"]
+[ext_resource type="PackedScene" uid="uid://cvcuqpa40hi3" path="res://Parts/_part_body_92.tscn" id="19_4d0us"]
+[ext_resource type="PackedScene" uid="uid://d071lxmpcj0mx" path="res://Parts/_part_body_13.tscn" id="20_bwuhk"]
+[ext_resource type="PackedScene" uid="uid://cm20a1rl5r456" path="res://Parts/_part_body_23.tscn" id="21_qfqpu"]
+[ext_resource type="PackedScene" uid="uid://cgel7f4f56sgf" path="res://Parts/_part_body_33.tscn" id="22_6pggx"]
+[ext_resource type="PackedScene" uid="uid://dpo4cjnqvqg77" path="res://Parts/_part_body_43.tscn" id="23_x4ic1"]
+[ext_resource type="PackedScene" uid="uid://ckdek7i7nnpx6" path="res://Parts/_part_body_53.tscn" id="24_1oubr"]
+[ext_resource type="PackedScene" uid="uid://dt5esnuuf2jlh" path="res://Parts/_part_body_63.tscn" id="25_v7bgh"]
+[ext_resource type="PackedScene" uid="uid://8ro28pag32y3" path="res://Parts/_part_body_73.tscn" id="26_m7r1y"]
+[ext_resource type="PackedScene" uid="uid://bjepdl5mt2kt2" path="res://Parts/_part_body_83.tscn" id="27_qjcky"]
+[ext_resource type="PackedScene" uid="uid://dfbiqx67ax1eq" path="res://Parts/_part_body_93.tscn" id="28_h12ha"]
+
+[node name="Shop" instance=ExtResource("1_4cqq0")]
+leave_to = "_town_8.tscn"
+
+[node name="Part" parent="Parts_Body" index="0" instance=ExtResource("2_kaqam")]
+
+[node name="Part2" parent="Parts_Body" index="1" instance=ExtResource("3_77wyw")]
+
+[node name="Part3" parent="Parts_Body" index="2" instance=ExtResource("4_ncoyr")]
+
+[node name="Part4" parent="Parts_Body" index="3" instance=ExtResource("5_3xreo")]
+
+[node name="Part5" parent="Parts_Body" index="4" instance=ExtResource("6_vlveh")]
+
+[node name="Part6" parent="Parts_Body" index="5" instance=ExtResource("7_ulcfc")]
+
+[node name="Part7" parent="Parts_Body" index="6" instance=ExtResource("8_2it3n")]
+
+[node name="Part8" parent="Parts_Body" index="7" instance=ExtResource("9_xi7gv")]
+
+[node name="Part9" parent="Parts_Body" index="8" instance=ExtResource("10_wkk6a")]
+
+[node name="Part" parent="Parts_Legs" index="0" instance=ExtResource("11_q5fni")]
+
+[node name="Part2" parent="Parts_Legs" index="1" instance=ExtResource("12_y850d")]
+
+[node name="Part3" parent="Parts_Legs" index="2" instance=ExtResource("13_t2lts")]
+
+[node name="Part4" parent="Parts_Legs" index="3" instance=ExtResource("14_dc1nm")]
+
+[node name="Part5" parent="Parts_Legs" index="4" instance=ExtResource("15_q6kee")]
+
+[node name="Part6" parent="Parts_Legs" index="5" instance=ExtResource("16_sgv5m")]
+
+[node name="Part7" parent="Parts_Legs" index="6" instance=ExtResource("17_cl3tm")]
+
+[node name="Part8" parent="Parts_Legs" index="7" instance=ExtResource("18_ai8j7")]
+
+[node name="Part9" parent="Parts_Legs" index="8" instance=ExtResource("19_4d0us")]
+
+[node name="Part" parent="Parts_Weapons" index="0" instance=ExtResource("20_bwuhk")]
+
+[node name="Part2" parent="Parts_Weapons" index="1" instance=ExtResource("21_qfqpu")]
+
+[node name="Part3" parent="Parts_Weapons" index="2" instance=ExtResource("22_6pggx")]
+
+[node name="Part4" parent="Parts_Weapons" index="3" instance=ExtResource("23_x4ic1")]
+
+[node name="Part5" parent="Parts_Weapons" index="4" instance=ExtResource("24_1oubr")]
+
+[node name="Part6" parent="Parts_Weapons" index="5" instance=ExtResource("25_v7bgh")]
+
+[node name="Part7" parent="Parts_Weapons" index="6" instance=ExtResource("26_m7r1y")]
+
+[node name="Part8" parent="Parts_Weapons" index="7" instance=ExtResource("27_qjcky")]
+
+[node name="Part9" parent="Parts_Weapons" index="8" instance=ExtResource("28_h12ha")]

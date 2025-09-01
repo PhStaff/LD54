@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2wrgnhgdofg4"]
+
+[ext_resource type="PackedScene" uid="uid://s0nrwvacroms" path="res://Towns/Town.tscn" id="1_iqa8e"]
+
+[node name="Town" instance=ExtResource("1_iqa8e")]
+town_shop = "_shop_12.tscn"
+town_name = "Town 12"

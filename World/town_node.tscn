@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd15yti7vnrt1"]
+
+[ext_resource type="Texture2D" uid="uid://bebdvpd05hgk8" path="res://Materials/town.png" id="1_clly0"]
+[ext_resource type="Texture2D" uid="uid://dcftane32rfp2" path="res://Materials/town_pressed.png" id="2_wsol0"]
+[ext_resource type="Texture2D" uid="uid://dh3rajq7ok1oj" path="res://Materials/town_hower.png" id="3_bnluc"]
+[ext_resource type="Script" path="res://World/town_node.gd" id="4_y0dkt"]
+
+[node name="Town_Node" type="TextureButton"]
+offset_right = 16.0
+offset_bottom = 16.0
+pivot_offset = Vector2(8, 8)
+texture_normal = ExtResource("1_clly0")
+texture_pressed = ExtResource("2_wsol0")
+texture_hover = ExtResource("3_bnluc")
+texture_focused = ExtResource("3_bnluc")
+script = ExtResource("4_y0dkt")
+
+[node name="Town_Name" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -8.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = -9.0

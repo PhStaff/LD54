@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://c01pc7nunudel"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_irt5r"]
+
+[node name="Event" instance=ExtResource("1_irt5r")]
+event_name = "ScoutEasy"
+difficulty = 25
+win_money = 50
+fail_ammo = -1
+fail_condition = -10
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for a little scouting mission. The area is well known
+to be quite safe."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+The only dangerous thing are some mean looking birds, but you can 
+deal with them. In a friendly way of course. 
+
+Money +50"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You go to the area the client asked you to scout. 
+
+The area is indeed harmles, but you trip over your own feet.
+Luckily noone saw that.
+
+Condition -10
+"

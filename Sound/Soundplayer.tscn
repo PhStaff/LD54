@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://66v1qjcr8hfs"]
+
+[ext_resource type="Script" path="res://Sound/Soundplayer.gd" id="1_phvfa"]
+
+[node name="Soundplayer" type="Node"]
+script = ExtResource("1_phvfa")
+
+[node name="AudioPlayers" type="Node" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AudioPlayers"]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="AudioPlayers"]
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="AudioPlayers"]
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="AudioPlayers"]

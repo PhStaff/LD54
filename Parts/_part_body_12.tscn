@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqas3yejbbr7y"]
+
+[ext_resource type="PackedScene" uid="uid://dd1rie08wkcl0" path="res://Parts/part.tscn" id="1_5f5c6"]
+[ext_resource type="Texture2D" uid="uid://24eo6t2khkii" path="res://Materials/Parts/part_0_5.png" id="2_kv2dx"]
+[ext_resource type="Texture2D" uid="uid://cqgd00ohkbqbi" path="res://Materials/Parts/part_0_3.png" id="3_bdnmh"]
+[ext_resource type="Texture2D" uid="uid://xcoqqxf4s1oc" path="res://Materials/Parts/part_0_2.png" id="4_s7ort"]
+[ext_resource type="Texture2D" uid="uid://cq82evkiqe22h" path="res://Materials/Parts/part_0_4.png" id="5_66bxp"]
+[ext_resource type="Texture2D" uid="uid://bigwgejqepyj5" path="res://Materials/Parts/part_0_1.png" id="6_f0w7g"]
+
+[node name="Part" instance=ExtResource("1_5f5c6")]
+type = 1
+part_name = "SP Series 58"
+weight = 50
+weight_cap = 185
+price = 50
+connect_r_leg_x = -2
+connect_r_leg_y = 22
+
+[node name="l_leg" type="Sprite2D" parent="." index="0"]
+position = Vector2(3, 10)
+texture = ExtResource("2_kv2dx")
+
+[node name="l_arm" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(8, 3)
+texture = ExtResource("3_bdnmh")
+
+[node name="Body" type="Sprite2D" parent="." index="2"]
+visible = false
+texture = ExtResource("4_s7ort")
+
+[node name="r_leg" type="Sprite2D" parent="." index="3"]
+position = Vector2(-1, 11)
+texture = ExtResource("5_66bxp")
+
+[node name="r_arm" type="Sprite2D" parent="." index="4"]
+visible = false
+position = Vector2(-3, 8)
+texture = ExtResource("6_f0w7g")

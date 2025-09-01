@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://ckljygn4r2cvn"]
+
+[ext_resource type="PackedScene" uid="uid://dd1rie08wkcl0" path="res://Parts/part.tscn" id="1_ncdit"]
+[ext_resource type="Texture2D" uid="uid://c8tg68tlfy1o5" path="res://Materials/Parts/part_6_5.png" id="2_3yuf6"]
+[ext_resource type="Texture2D" uid="uid://cxk1krkxwx6eh" path="res://Materials/Parts/part_6_3.png" id="3_4gol4"]
+[ext_resource type="Texture2D" uid="uid://0s8mjrmya6bb" path="res://Materials/Parts/part_6_2.png" id="4_m4c58"]
+[ext_resource type="Texture2D" uid="uid://o0rgh8earf5a" path="res://Materials/Parts/part_6_4.png" id="5_3oyu0"]
+[ext_resource type="Texture2D" uid="uid://fdfhw7osr56r" path="res://Materials/Parts/part_6_1.png" id="6_fxqxi"]
+
+[node name="Part" instance=ExtResource("1_ncdit")]
+part_name = "Ender TA"
+armor = 400
+weight = 120
+price = 250
+connect_l_leg_x = 1
+connect_l_leg_y = 10
+connect_l_arm_x = 4
+connect_l_arm_y = -5
+connect_r_leg_x = -4
+connect_r_leg_y = 9
+connect_r_arm_x = -9
+connect_r_arm_y = -5
+
+[node name="l_leg" type="Sprite2D" parent="." index="0"]
+visible = false
+position = Vector2(4, 20)
+texture = ExtResource("2_3yuf6")
+
+[node name="l_arm" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(9, 2)
+texture = ExtResource("3_4gol4")
+
+[node name="Body" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("4_m4c58")
+
+[node name="r_leg" type="Sprite2D" parent="." index="3"]
+visible = false
+position = Vector2(-7, 21)
+texture = ExtResource("5_3oyu0")
+
+[node name="r_arm" type="Sprite2D" parent="." index="4"]
+visible = false
+position = Vector2(-7, 3)
+texture = ExtResource("6_fxqxi")

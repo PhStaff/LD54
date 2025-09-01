@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7a6n7tgwqdan"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_sera2"]
+
+[node name="Event" instance=ExtResource("1_sera2")]
+event_name = "WreckageTrapBig"
+difficulty = 75
+win_money = 50
+win_ammo = -5
+fail_money = -20
+fail_fuel = -2
+fail_ammo = -5
+fail_condition = -20
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "From the distance you can see smoke. You pause to take a closer 
+look. You see a wreckage of a big mech. What ever happened, it wasn't
+weak.
+
+Do you investigate it?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "What ever happened, it was dangerous. You decide not to investigate
+the wreckage."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "As you approach the wreckage, you see movement out of the corner of 
+your eye. It's a trap!
+
+Your attackers aren't weak, but you are stronger. It is a hard battle, until
+you finally manage to fight them off. The reward is also bigger.
+
+Money +50
+
+Ammo -5"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "As you approach the wreckage, you see movement out of the corner of 
+your eye. It's a trap!
+
+Your attackers are too strong and you can't fight back. You manage to 
+survive the ambush, but not without harm
+
+Money -20
+Fuel -2
+Ammo -5
+Condition -20"

@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvdon1vcn3r44"]
+
+[ext_resource type="PackedScene" uid="uid://c4yawuxi2qfpp" path="res://player.tscn" id="1_acu1j"]
+[ext_resource type="Script" path="res://world.gd" id="1_mafur"]
+[ext_resource type="Texture2D" uid="uid://crf24ekdn86i4" path="res://Materials/world.png" id="2_qva3l"]
+[ext_resource type="Texture2D" uid="uid://c5yitx87hfp10" path="res://Materials/player_world.png" id="3_ra2ns"]
+[ext_resource type="PackedScene" uid="uid://chkhr0asjigay" path="res://town_node.tscn" id="4_im5py"]
+[ext_resource type="Script" path="res://Player_Node.gd" id="5_5m3ew"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_mafur")
+
+[node name="World_Map" type="Sprite2D" parent="."]
+position = Vector2(824, 304)
+texture = ExtResource("2_qva3l")
+
+[node name="Player" parent="." instance=ExtResource("1_acu1j")]
+
+[node name="Town_start" parent="." instance=ExtResource("4_im5py")]
+offset_left = 552.0
+offset_top = 248.0
+offset_right = 568.0
+offset_bottom = 264.0
+
+[node name="Town2" parent="." instance=ExtResource("4_im5py")]
+offset_left = 768.0
+offset_top = 352.0
+offset_right = 768.0
+offset_bottom = 352.0
+
+[node name="Town3" parent="." instance=ExtResource("4_im5py")]
+offset_left = 784.0
+offset_top = 168.0
+offset_right = 784.0
+offset_bottom = 168.0
+
+[node name="Town_end" parent="." instance=ExtResource("4_im5py")]
+offset_left = 1080.0
+offset_top = 240.0
+offset_right = 1080.0
+offset_bottom = 240.0
+
+[node name="Town_Visit" type="Button" parent="."]
+offset_left = 1080.0
+offset_top = 632.0
+offset_right = 1168.0
+offset_bottom = 663.0
+text = "Visit Town"
+
+[node name="Town_goto" type="Button" parent="."]
+offset_left = 696.0
+offset_top = 632.0
+offset_right = 792.0
+offset_bottom = 663.0
+text = "Go to Town"
+
+[node name="Player_Node" type="CharacterBody2D" parent="."]
+script = ExtResource("5_5m3ew")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player_Node"]
+texture = ExtResource("3_ra2ns")
+
+[connection signal="button_down" from="Town_start" to="." method="_on_town_button_down" binds= ["Town_start"]]
+[connection signal="button_down" from="Town2" to="." method="_on_town_button_down" binds= ["Town2"]]
+[connection signal="button_down" from="Town3" to="." method="_on_town_button_down" binds= ["Town3"]]
+[connection signal="button_down" from="Town_end" to="." method="_on_town_button_down" binds= ["Town_end"]]
+[connection signal="button_down" from="Town_Visit" to="." method="_on_town_visit_button_down"]
+[connection signal="button_down" from="Town_goto" to="." method="_on_town_goto_button_down"]

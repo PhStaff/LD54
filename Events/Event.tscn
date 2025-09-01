@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxayq7lhb4mey"]
+
+[ext_resource type="Script" path="res://Events/Event.gd" id="1_jbglb"]
+
+[node name="Event" type="Node2D"]
+script = ExtResource("1_jbglb")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 512.0
+offset_top = 64.0
+offset_right = 1152.0
+offset_bottom = 512.0
+
+[node name="Accept" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 384.0
+offset_right = 452.0
+offset_bottom = 415.0
+text = "Accept"
+
+[node name="Decline" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 384.0
+offset_right = 258.0
+offset_bottom = 415.0
+text = "Decline"
+
+[node name="Close" type="Button" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 296.0
+offset_top = 384.0
+offset_right = 346.0
+offset_bottom = 415.0
+text = "Close"
+
+[node name="Description" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 608.0
+offset_bottom = 312.0
+
+[node name="Declined" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 600.0
+offset_bottom = 168.0
+
+[node name="Win" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 608.0
+offset_bottom = 320.0
+
+[node name="Fail" type="Label" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 608.0
+offset_bottom = 208.0
+
+[connection signal="button_down" from="Panel/Accept" to="." method="_on_accept_button_down"]
+[connection signal="button_down" from="Panel/Decline" to="." method="_on_decline_button_down"]
+[connection signal="button_down" from="Panel/Close" to="." method="_on_close_button_down"]

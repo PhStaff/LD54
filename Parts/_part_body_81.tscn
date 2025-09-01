@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkkojpgdjp7kp"]
+
+[ext_resource type="PackedScene" uid="uid://dd1rie08wkcl0" path="res://Parts/part.tscn" id="1_arp6g"]
+[ext_resource type="Texture2D" uid="uid://1mogmqm6qodi" path="res://Materials/Parts/part_8_5.png" id="2_lahti"]
+[ext_resource type="Texture2D" uid="uid://bnaos81wtsh1s" path="res://Materials/Parts/part_8_3.png" id="3_0tl3n"]
+[ext_resource type="Texture2D" uid="uid://wwvo12msbh4p" path="res://Materials/Parts/part_8_2.png" id="4_c6eaf"]
+[ext_resource type="Texture2D" uid="uid://c22lrhd6ra8ig" path="res://Materials/Parts/part_8_4.png" id="5_l6rvb"]
+[ext_resource type="Texture2D" uid="uid://b42y0ebdpw60f" path="res://Materials/Parts/part_8_1.png" id="6_2471f"]
+
+[node name="Part" instance=ExtResource("1_arp6g")]
+part_name = "Arktos III"
+armor = 440
+weight = 200
+price = 320
+connect_l_leg_x = 7
+connect_l_leg_y = 9
+connect_l_arm_x = 9
+connect_l_arm_y = -5
+connect_r_leg_x = -1
+connect_r_leg_y = 10
+connect_r_arm_x = -8
+connect_r_arm_y = -5
+
+[node name="l_leg" type="Sprite2D" parent="." index="0"]
+visible = false
+position = Vector2(8, 22)
+texture = ExtResource("2_lahti")
+
+[node name="l_arm" type="Sprite2D" parent="." index="1"]
+visible = false
+position = Vector2(15, 4)
+texture = ExtResource("3_0tl3n")
+
+[node name="Body" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("4_c6eaf")
+
+[node name="r_leg" type="Sprite2D" parent="." index="3"]
+visible = false
+position = Vector2(-4, 25)
+texture = ExtResource("5_l6rvb")
+
+[node name="r_arm" type="Sprite2D" parent="." index="4"]
+visible = false
+position = Vector2(-5, 6)
+texture = ExtResource("6_2471f")

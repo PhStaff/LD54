@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://clra6tv7j4dej"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_uepx7"]
+
+[node name="Event" instance=ExtResource("1_uepx7")]
+event_name = "Mechanic"
+win_money = -10
+win_condition = 20
+fail_money = -10
+fail_condition = 5
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "In the distance you see a small building. As you are getting closer, you
+see a friendly looking person.
+
+The person approches you. It's a mechanic and offers to repair some parts
+of your mech.
+
+Do you take their offer?"
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You decline. It might be a trap and if not, you also need that money for
+yourself."
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accept the offer. The mechanic does a great job and repairs a lot 
+of your broken parts.
+
+Condition +20
+Money -10"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accept the offer. It's not much, but the mechanic could repair
+some parts of your mech.
+
+Condition +5
+Money -10"

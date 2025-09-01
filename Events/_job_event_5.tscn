@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg2ot1ydrmch0"]
+
+[ext_resource type="PackedScene" uid="uid://cxayq7lhb4mey" path="res://Events/Event.tscn" id="1_yejwm"]
+
+[node name="Event" instance=ExtResource("1_yejwm")]
+event_name = "ProtectMedium"
+difficulty = 50
+win_money = 100
+win_ammo = -1
+fail_ammo = -2
+fail_condition = -35
+
+[node name="Hidden_Text" type="Panel" parent="." index="1"]
+visible = false
+offset_right = 320.0
+offset_bottom = 128.0
+
+[node name="Hidden_Description" type="Label" parent="Hidden_Text" index="0"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 242.0
+offset_bottom = 66.0
+text = "The client asks you for support for a mission close to the village. 
+They assume there might be some ambushes."
+
+[node name="Hidden_Declined" type="Label" parent="Hidden_Text" index="1"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 66.0
+text = "You declined"
+
+[node name="Hidden_Win" type="Label" parent="Hidden_Text" index="2"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+You get ambushed by some armed bandits. They aren't harmles, but
+you could take them out.
+
+Money +10	0
+
+Ammo -1"
+
+[node name="Hidden_Fail" type="Label" parent="Hidden_Text" index="3"]
+visible = false
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 435.0
+offset_bottom = 118.0
+text = "You accompany the client during their mission.
+
+You get ambushed by some armed bandits.  You can't react quickly
+enough and soon they take out your client and deal some damage
+to you.
+
+Condition -35
+Ammo -2"
